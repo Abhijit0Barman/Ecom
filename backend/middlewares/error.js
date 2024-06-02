@@ -4,10 +4,10 @@ module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.message = err.message || "Internal Server Error";
 
-  // Cast Error for Wrong MongoDB Id
+  //Wrong Id Error In MongoDB
   if (err.name === "CastError") {
     const message = `Resource not found with id of ${err.value} Invalid: ${err.path}`;
-    err=new ErrorHandler(message, 404)
+    err = new ErrorHandler(message, 404);
   }
 
   res.status(err.statusCode).json({

@@ -1,21 +1,18 @@
-const express = require("express")
-const errorMiddleware=require("./middlewares/error")
+const express = require("express");
+const errorMiddleware = require("./middlewares/error");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 // Route Import
-const productRoute = require("./routes/productRoute")
+const productRoute = require("./routes/productRoute");
+const userRoute = require("./routes/userRoutes");
 
-// const homeRoute = require("./routes/home")
-// const userRoute = require("./routes/user")
-// const orderRoute = require("./routes/order")
-// const uploadRoute = require("./routes/upload")
-
-app.use("/api/v1", productRoute)
+app.use("/api/v1", productRoute);
+app.use("/api/v1", userRoute);
 
 // Middleware for Errors
-app.use(errorMiddleware)
+app.use(errorMiddleware);
 
-module.exports = app 
+module.exports = app;
