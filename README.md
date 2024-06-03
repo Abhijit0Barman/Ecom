@@ -10,36 +10,9 @@ https://www.youtube.com/watch?v=AN3t-OmdyKA&list=PLxmbIYlxoEEeRHS706wQtU6yT5lox8
 
 
 
-2:31:33
+2:48:06
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-PORT=4000
-
-DB_URL="mongodb+srv://abhijitbarman96:barman@cluster0.ljped8d.mongodb.net/Ecom?retryWrites=true&w=majority&appName=Cluster0"
-
-JWT_SECRET=helloworld
-
-JWT_EXPIRE=5d
-
-COOKIE_EXPIRE=5
-
-
-# NODE_ENV="production"
