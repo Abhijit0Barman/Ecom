@@ -15,7 +15,7 @@ const sendToken = (user, statusCode, res) => {
   if (process.env.NODE_ENV === "production") {
     options.secure = true;
   }
-  res.status(statusCode).cookie("jwt", token, options).json({
+  res.status(statusCode).cookie("token", token, options).json({
     success: true,
     user,
     token,

@@ -1,9 +1,10 @@
 const express = require("express");
+const app = express();
+const cookieParser = require("cookie-parser");
 const errorMiddleware = require("./middlewares/error");
 
-const app = express();
-
 app.use(express.json());
+app.use(cookieParser());
 
 // Route Import
 const productRoute = require("./routes/productRoute");
